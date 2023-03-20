@@ -1,0 +1,8 @@
+pandas
+numpy
+black
+pytest
+Pillow
+pyhere
+scikit-learn
+pydantic
