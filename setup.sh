@@ -28,6 +28,6 @@ pip3 install -r requirements.txt
 
 # git pull
 git config --global credential.helper store
-python3 -m wandb login
+
 # huggingface-cli login
 python3 -m huggingface_hub.commands.huggingface_cli login
