@@ -15,10 +15,10 @@ def extract_labels_from_str(labels: str) -> List[dict]:
 
 
 def _get_reformatted_label(label: dict) -> ReformattedLabel:
-    xmin = label['x'] / label['original_width']
-    ymin = label['y'] / label['original_height']
-    xmax = (label['x'] + label['width']) / label['original_width']
-    ymax = (label['y'] + label['height']) / label['original_height']
+    xmin = label['x'] / 100
+    ymin = label['y'] / 100
+    xmax = (label['x'] + label['width']) / 100
+    ymax = (label['y'] + label['height']) / 100
 
     reformat_label: ReformattedLabel = ReformattedLabel(
         xmin = float(xmin),
@@ -33,6 +33,8 @@ def _get_reformatted_label(label: dict) -> ReformattedLabel:
 def reformat_labels(labels: List[Dict]) -> List[str]:
     reformatted_labels: List = []
     for _label in labels:
+        # import pdb
+        # pdb.set_trace()
         reformatted_label: ReformattedLabel = _get_reformatted_label(_label)
         reformatted_labels.append(reformatted_label.dict())
 
