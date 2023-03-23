@@ -12,3 +12,4 @@ venv/
 .ipynb_checkpoints/
 saved_pretrained/
 saved_pretrained_backup/
+/saved_pretrained (1)/
